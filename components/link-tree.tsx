@@ -58,7 +58,7 @@ export default function LinkTree() {
 
   const { themeSettings } = useThemeSettings()
 
-  const toggleEditMode = () => {
+  function toggleEditMode() {
     if (isEditMode) {
       saveProfileChanges()
       toast({
@@ -68,6 +68,8 @@ export default function LinkTree() {
     }
     setIsEditMode(!isEditMode)
   }
+
+  
 
   // Apply font family to the entire application when it changes
   useEffect(() => {
