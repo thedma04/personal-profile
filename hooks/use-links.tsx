@@ -37,14 +37,14 @@ export function useLinks(initialLinks: LinkItemProps[]) {
       return
     }
 
-    const updatedLinks = [
-      ...links,
-      {
-        id: Date.now().toString(),
-        title: newLink.title,
-        url: newLink.url,
-      },
-    ]
+    // const updatedLinks = [
+    //   ...links,
+    //   {
+    //     id: Date.now().toString(),
+    //     title: newLink.title,
+    //     url: newLink.url,
+    //   },
+    // ]
 
     setLinks(updatedLinks)
     setNewLink({ title: "", url: "" })
@@ -64,14 +64,14 @@ export function useLinks(initialLinks: LinkItemProps[]) {
     })
   }
 
-  // Update a link
-  const updateLink = (updatedLink: LinkItemProps) => {
-    setLinks(links.map((link) => (link.id === updatedLink.id ? updatedLink : link)))
-    toast({
-      title: "Link updated",
-      description: "Your link has been updated successfully",
-    })
-  }
+  // // Update a link
+  // const updateLink = (updatedLink: LinkItemProps) => {
+  //   setLinks(links.map((link) => (link.id === updatedLink.id ? updatedLink : link)))
+  //   toast({
+  //     title: "Link updated",
+  //     description: "Your link has been updated successfully",
+  //   })
+  // }
 
   // Handle new link input changes
   const handleNewLinkChange = (field: "title" | "url", value: string) => {
