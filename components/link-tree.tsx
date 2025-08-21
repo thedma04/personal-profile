@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils"
 
 // Default profile data
 const defaultProfile = {
-  name: "Hayden Bleasel",
+  // name: "Hayden Bleasel",
   bio: "I'm an Australian Design Engineer living in 🇺🇸 San Francisco, California. I love creating beautiful software that delights users and reimagines the way we interact with technology.",
   avatarUrl: "https://github.com/haydenbleasel.png",
   secondaryBg: "bg-secondary",
@@ -36,7 +36,7 @@ const defaultLinks = [
   {
     id: "3",
     title: "GitHub",
-    url: "https://github.com/haydenbleasel",
+    // url: "https://github.com/haydenbleasel",
   },
   {
     id: "4",
@@ -44,6 +44,10 @@ const defaultLinks = [
     url: "https://www.linkedin.com/in/haydenbleasel",
   },
 ]
+
+// Todo: Testing something more more more
+
+// Another comment here 
 
 export default function LinkTree() {
   const { toast } = useToast()
@@ -58,7 +62,7 @@ export default function LinkTree() {
 
   const { themeSettings } = useThemeSettings()
 
-  const toggleEditMode = () => {
+  const  toggleEditMode = () => {
     if (isEditMode) {
       saveProfileChanges()
       toast({
@@ -68,6 +72,8 @@ export default function LinkTree() {
     }
     setIsEditMode(!isEditMode)
   }
+
+  
 
   // Apply font family to the entire application when it changes
   useEffect(() => {
