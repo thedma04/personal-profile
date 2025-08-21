@@ -62,7 +62,7 @@ export default function LinkTree() {
 
   const { themeSettings } = useThemeSettings()
 
-  function toggleEditMode() {
+  const  toggleEditMode =() => {
     if (isEditMode) {
       saveProfileChanges()
       toast({
